@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Cars, Solar & Clean Energy | Tesla</title>
+  <link rel="icon" type="image/png" href="./favicon.png"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-top"> 
+      <a href="#"> Read Tesla's 2020 Impact Report</a>
+    </div>
+    <div class="nav-bottom">
+      <div class="nav-left">
+        <a href="#">
+          <img src="./img/logo.png" />
+        </a>
+      </div>
+      <div class="nav-list nav-middle">
+        <a href="#">Model S</a>
+        <a href="#">Model 3</a>
+        <a href="#">Model X</a>
+        <a href="#">Model Y</a>
+        <a href="#">Solar Roof</a>
+        <a href="#">Solar Panels</a>
+      </div>
+      <div class="nav-list nav-right">
+        <a href="#">Shop</a>
+        <a href="#">Account</a>
+        <a href="#">Menu</a>
+      </div>
+    </div>
+  </nav>
+  <section class="product" id="model-s">
+    <div class="content">
+      <div class="top">
+        <h1>Model S</h1>
+        <h2>Order Online for <a href="#">Touchless Delivery</a></h2>
+      </div>
+      <div class="bottom">
+        <button>CUSTOM ORDER</button>
+        <button class="white">EXISTING INVENTORY</button>
+      </div>
+    </div>
+  </section>
+  <section class="product" id="model-y">
+    <div class="content">
+      <div class="top">
+        <h1>Model Y</h1>
+        <h2>Order Online for <a href="#">Touchless Delivery</a></h2>
+      </div>
+      <div class="bottom">
+        <button>CUSTOM ORDER</button>
+        <button class="white">EXISTING INVENTORY</button>
+      </div>
+    </div>
+  </section>
+  <section class="product" id="model-3">
+    <div class="content">
+      <div class="top">
+        <h1>Model 3</h1>
+        <h2>Order Online for <a href="#">Touchless Delivery</a></h2>
+      </div>
+      <div class="bottom">
+        <button>CUSTOM ORDER</button>
+        <button class="white">EXISTING INVENTORY</button>
+      </div>
+    </div>
+  </section>
+  <section class="product" id="model-x">
+    <div class="content">
+      <div class="top">
+        <h1>Model X</h1>
+        <h2>Order Online for <a href="#">Touchless Delivery</a></h2>
+      </div>
+      <div class="bottom">
+        <button>CUSTOM ORDER</button>
+        <button class="white">EXISTING INVENTORY</button>
+      </div>
+    </div>
+  </section>
+  <section class="product" id="solar-panels">
+    <div class="content">
+      <div class="top">
+        <h1>Solar Panels</h1>
+        <h2>Lowest Cost Solar Panels in America Order</h2>
+      </div>
+      <div class="bottom">
+        <button>ORDER NOW</button>
+        <button class="white">LEARN MORE</button>
+      </div>
+    </div>
+  </section>
+  <section class="product" id="solar-roof">
+    <div class="content">
+      <div class="top">
+        <h1>Solar Roof</h1>
+        <h2>Produce Clean Energy From Your Roof</h2>
+      </div>
+      <div class="bottom">
+        <button>ORDER NOW</button>
+        <button class="white">LEARN MORE</button>
+      </div>
+    </div>
+  </section>
+  <section class="product" id="accessories">
+    <div class="content">
+      <div class="top">
+        <h1>Accessories</h1>
+      </div>
+      <div class="bottom">
+        <button>SHOP NOW</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="content">
+      <a href="#">Tesla © 2021</a>
+      <a href="#">Privacy & Legal</a>
+      <a href="#">Contact</a>
+      <a href="#">Careers</a>
+      <a href="#">News</a>
+      <a href="#">Engage</a>
+      <a href="#">Locations</a>
+    </div>
+  </footer>
+
+</body>
+
+<script>
+  var count = 0;
+  var started = false;
+  window.onscroll= function(e) {
+    // print "false" if direction is down and "true" if up
+    count= (count+1)%5;
+    if (count==0){
+      if(this.oldScroll > this.scrollY){
+        pos =  Math.floor(this.scrollY/window.innerHeight);
+        window.scrollTo(0, window.innerHeight*pos);
+      }else{
+        pos =  Math.floor(this.scrollY/window.innerHeight)+1
+        window.scrollTo(0, window.innerHeight*pos);
+      }
+      console.log(count)
+      
+    }
+    this.oldScroll = this.scrollY; 
+  }
+</script>
+</html>

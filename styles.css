@@ -5,14 +5,14 @@ body, html{
   scroll-behavior: smooth;
 }
 nav{
-  width: 100%;
+  width: 100vw;
   position: fixed;
   margin: 0;
   z-index: 1;
 }
 
 nav .nav-top{
-  width: 100%;
+  width: 100vw;
   height: 3rem;
   display: flex;
   background-color: rgba(255, 255, 255, 0.9);
@@ -70,65 +70,142 @@ nav img{
   width: auto;
 }
 
+.nav-small{
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-middle, .nav-right{
+    display: none;
+  }
+
+  .nav-small{
+    display: inherit;
+  }
+  
+  .nav-small a{
+      font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: rgb(24, 27, 33);
+      font-size: 16px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 0, 5px;
+      background-color: rgba(0,0,0,10%);
+  }
+}
+
 #model-s{
   position: relative;
-  background-position: center;
   background-image: url(./img/models.jpeg);
-  background-size: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 #model-y{
   position: relative;
-  background-position: center;
   background-image: url(./img/modely.jpeg);
-  background-size: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 #model-x{
   position: relative;
-  background-position: center;
   background-image: url(./img/modelx.jpeg);
-  background-size: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 #model-3{
   position: relative;
-  background-position: center;
   background-image: url(./img/model3.jpeg);
-  background-size: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 #solar-roof{
   position: relative;
-  background-position: center;
   background-image: url(./img/solarroof.jpeg);
-  background-size: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 #solar-panels{
   position: relative;
-  background-position: center;
   background-image: url(./img/solarpanels.jpeg);
-  background-size: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 #accessories{
   position: relative;
-  background-position: center;
   background-image: url(./img/accessories.jpeg);
-  background-size: 100%;
-  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  #model-s{
+    background-image: url(./img/models-mobile.jpeg);
+    background-size: 100vw;
+  }
+  #model-x{
+    background-image: url(./img/modelx-mobile.jpeg);
+    background-size: 100vw;
+  }
+  #model-3{
+    background-image: url(./img/model3-mobile.jpeg);
+    background-size: 100vw;
+  }
+  #acdessories{
+    background-image: url(./img/accessories-mobile.jpeg);
+    background-size: 100vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #solar-roof{
+    background-image: url(./img/solarroof-mobile.jpeg);
+    background-size: 100vw;
+  }
+  #model-y{
+    background-image: url(./img/modely-mobile.jpeg);
+    background-size: 100vw;
+  }
 }
 
 .product {
-  padding: 5.5rem 23rem 4rem 23rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   box-sizing: border-box;
+}
+
+.product .top{
+  margin-top: 7.5rem;
 }
 
 .product h1{
@@ -163,27 +240,46 @@ nav img{
 
 .product .content{
   position: relative;
-  height: 100%;
+  display: block;
+  min-height: 100%;
+  min-width: 256px;
+  width: 610px;
 }
 
 .product .bottom{
   position: absolute;
   display: flex;
-  width: 100%;
-  bottom: 3rem;
-  justify-content: space-between;
+  min-height: 40px;
+  min-width: 256px;
+  width: 610px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  bottom: 0;
+  margin-bottom: 5.4rem;
 }
 
+@media only screen and (max-width: 550px) {
+  .product .bottom{
+    width: auto;
+    justify-content: center;
+  }
+
+  .product .bottom button{
+    min-width: 90%;
+    margin-top: 1rem;
+  }
+
+}
 
 .product .bottom button{
   border: none;
-  border-radius: 50px;
+  border-radius: 20px;
   background-color: rgba(23, 26, 32, 0.8);
   color: white;
   font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
-  width: 250px;
+  width: 256px;
   height: 40px;
   align-content: center;
 }
@@ -200,26 +296,46 @@ nav img{
 
 footer{
   box-sizing: border-box;
+  position: absolute;
   z-index: visible;
   width: 100%;
-  height: 2.5rem;
-  margin: 0;
-  margin-top: -2.5rem;
+  height: fit-content;
+  bottom: 0;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
 }
 
-footer .content{
+footer .footer-content{
   position: relative;
   vertical-align: middle;
   height: 100%;
 }
 
-footer .content a{
+footer .footer-content a{
   text-decoration: none;
   color: rgb(92, 93, 97);
   font-weight: 600;
   font-size: 12px;
   font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 610px){
+  footer .footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: midcenterdle;
+  }
+  footer .footer-content a{
+    margin-top: 10px;
+  }
+
+  .footer-hide{
+    display: none;
+  }
+
+  #accessories .bottom {
+    margin-bottom: 14rem;
+  }
 }
